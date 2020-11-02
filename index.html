@@ -1,2 +1,29 @@
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+</head>
 
+<body>
+    <div>
+        <input type="text" id="00" onchange="setVal(0,0)" />
+        <input type="text" id="01" onchange="setVal(0,1)" />
+        <input type="text" id="02" onchange="setVal(0,2)" />
+    </div>
+    <div>
+        <input type="text" id="10" onchange="setVal(1,0)" />
+        <input type="text" id="11" onchange="setVal(1,1)" />
+        <input type="text" id="12" onchange="setVal(1,2)" />
+    </div>
+    <div>
+        <input type="text" id="20" onchange="setVal(2,0)" />
+        <input type="text" id="21" onchange="setVal(2,1)" />
+        <input type="text" id="22" onchange="setVal(2,2)" />
+    </div>
+    <button type="button" id="reset">Reset</button>
+    <script src="app.js"></script>
+</body>
+
+</html>
