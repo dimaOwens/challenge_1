@@ -1,8 +1,12 @@
 
+var n_a = document.getElementById("show1"); //notes area=
+var n_a2 = document.getElementById("show2");
 
 //Creating grid done
 var grid = []
 var row = [];
+var winner = "";
+var f = 0; //flag
 for (var i = 0; i < 3; i++) {
     row = [];
     for (var j = 0; j < 3; j++) {
@@ -15,31 +19,31 @@ for (var i = 0; i < 3; i++) {
 //RESET DONE
 var r_b = document.getElementById('reset') //reset_button
 r_b.onclick = function () {
+    var id;
     for (var i = 0; i < 3; i++) {
         for (var j = 0; j < 3; j++) {
             grid[i][j] = 0;
+            id = i + '' + j
+            document.getElementById(id).value = ''
         }
     }
+    n_a.innerHTML = '';
+    n_a2.innerHTML = '';
 }
 //
 
-//taking the player move
+//taking move and check
 var setVal = function (r, c) {
+
     var id = r + '' + c
     grid[r][c] = document.getElementById(id).value;
-    c_g(r, c)
-}
-//
-
-//tic-tac-checking
-var c_g = function (r, c) {
     var item = grid[r][c]
     //check row, col, main-diag, sec-diag  
     if (c_c(c, item) || c_r(r, item) || c_s_d(item) || c_m_d(item)) {
-        console.log(grid[r][c], " WINS");
+        winner = item;
+        n_a.innerHTML = "CONGRATULATION PLAYER >> " + winner.toUpperCase() + "  << YOU WON!!"
+        n_a2.innerHTML = "NOTE: Winner (" + winner.toUpperCase() + ") start the next round";
     }
-    //return false
-
 }
 
 

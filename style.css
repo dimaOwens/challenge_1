@@ -1,0 +1,38 @@
+body {
+    background-color: moccasin;
+}
+
+input {
+    background-color: papayawhip;
+    border-radius: 5px;
+    border-color: rosybrown;
+    margin: 0;
+}
+
+#show1 {
+    margin: 20px;
+    background-color: navajowhite;
+    text-align: center;
+}
+
+#show2 {
+    margin: 20px;
+    background-color: pink;
+    text-align: center;
+}
+
+#container {
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    left: 40%;
+    top: 40%;
+}
+
+#reset {
+    background-color: peachpuff;
+    padding: 4px;
+    margin: 8px;
+    border-radius: 5px;
+    border-color: brown;
+}
